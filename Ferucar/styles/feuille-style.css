@@ -1,0 +1,175 @@
+#html,#body {
+	margin:0;
+	padding:0;
+	margin:0;*/
+background-image: url("images/Cambrien.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+
+ #entete{
+//*background-color:#FF6600;*/
+height: 200px;
+height:200px;
+ }
+
+
+#centre {
+	overflow:hidden;
+
+}
+
+#navigation {
+	margin-left:300px;
+	background-color: rgba(255,255,255,0.75);ss
+	width: 100%
+	height:400px;
+}
+#pied {
+	opacity: valeur;
+	height: 10px
+}
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      opacity: 0;
+      height: 100%;
+    }
+
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #b3ffb3;
+      color: #070909;
+      padding: 15px;
+    }
+
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;}
+    }
+
+
+    .navbar-custom {
+      background-color: #b3ffb3;
+      border-color: #3cf752;
+
+    }
+    .navbar-custom .navbar-brand {
+      color: #070909;
+      min-height: 60px;
+      padding-top: 20px;
+    }
+    .navbar-custom .navbar-brand:hover,
+    .navbar-custom .navbar-brand:focus {
+      color: #838b85;
+    }/*couleur de texte lors du focus de la souris*/
+    .navbar-custom .navbar-text {
+      color: #009900;
+    }
+    .navbar-custom .navbar-nav > li > a {
+      color: #070909;
+      min-height: 60px;
+      padding-top: 20px;
+    }
+    .navbar-custom .navbar-nav > li > a:hover,
+    .navbar-custom .navbar-nav > li > a:focus {
+      color: #838b85;
+    }
+    .navbar-custom .navbar-nav > li > .dropdown-menu {
+      background-color: #b3ffb3;
+    }
+    .navbar-custom .navbar-nav > li > .dropdown-menu > li > a {
+      color: #070909;
+    }
+    .navbar-custom .navbar-nav > li > .dropdown-menu > li > a:hover,
+    .navbar-custom .navbar-nav > li > .dropdown-menu > li > a:focus {
+      color: #838b85;
+      background-color: #3cf752;
+    }
+    .navbar-custom .navbar-nav > li > .dropdown-menu > li > .divider {
+      background-color: #3cf752;
+    }
+    .navbar-custom .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-custom .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-custom .navbar-nav .open .dropdown-menu > .active > a:focus {
+      color: #3cf752;
+      background-color: #3cf752;
+      background-image: none;
+    }
+    .navbar-custom .navbar-nav > .active > a,
+    .navbar-custom .navbar-nav > .active > a:hover,
+    .navbar-custom .navbar-nav > .active > a:focus {
+      color: #838b85;
+      background-color: #3cf752;
+    }
+    .navbar-custom .navbar-nav > .open > a,
+    .navbar-custom .navbar-nav > .open > a:hover,
+    .navbar-custom .navbar-nav > .open > a:focus {
+      color: #838b85;
+      background-color: #3cf752;
+    }
+    .navbar-custom .navbar-toggle {
+      border-color: #3cf752;
+    }
+    .navbar-custom .navbar-toggle:hover,
+    .navbar-custom .navbar-toggle:focus {
+      background-color: #3cf752;
+    }
+    .navbar-custom .navbar-toggle .icon-bar {
+      background-color: #070909;
+    }
+    .navbar-custom .navbar-collapse,
+    .navbar-custom .navbar-form {
+      border-color: #070909;
+    }
+    .navbar-custom .navbar-link {
+      color: #070909;
+    }
+    .navbar-custom .navbar-link:hover {
+      color: #838b85;
+    }
+
+    @media (min-width: 767px) {
+      .navbar-custom .navbar-nav .open .dropdown-menu > li > a {
+        color: #070909;
+      }
+      .navbar-custom .navbar-nav .open .dropdown-menu > li > a:hover,
+      .navbar-custom .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #838b85;
+      }
+      .navbar-custom .navbar-nav .open .dropdown-menu > .active > a,
+      .navbar-custom .navbar-nav .open .dropdown-menu > .active > a:hover,
+      .navbar-custom .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #838b85;
+        background-color: #3cf752;
+      }
+    }
+    div.panel {
+    padding: 0 18px;
+    background-color: #A9A9A9;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+  </style>
+  <script>
+	$(document).ready(function() {
+
+     var docHeight = $(window).height();
+     var footerHeight = $('#footer').height();
+     var footerTop = $('#footer').position().top + footerHeight;
+
+     if (footerTop < docHeight) {
+      $('#footer').css('margin-top', -30+ (docHeight - footerTop) + 'px');
+    }
+  });
+    </script>
