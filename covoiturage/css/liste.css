@@ -1,0 +1,114 @@
+.liste{
+  border-collapse: separate;
+  background:#fff;
+  border-radius:20px;
+  margin:50px auto;
+  box-shadow:0px 0px 5px rgba(0,0,0,0.3);
+  box-shadow: black 4px 4px 20px;
+}
+.liste tbody tr:nth-child(2n) {
+  background:#f0f3f5;
+}
+
+.liste th {
+
+  font-family: 'Patua One', cursive;
+  font-size:16px;
+  font-weight:400;
+  color:#fff;
+  background-color:#AAAAAA;
+  text-shadow:1px 1px 0px rgba(0,0,0,0.5);
+  text-align:left;
+  padding:8px;
+  border-top:1px solid #858d99;
+}
+.liste th:last-child{
+	 border-radius:0px 20px 0px 0px;
+}
+.liste th:first-child{
+	 border-radius:20px 0px 0px 0px;
+}
+.liste tr:last-child td:last-child{
+	 border-radius:0px 0px 20px 0px;
+}
+
+.liste tr:last-child td:first-child{
+	 border-radius:0px 0px 0px 20px;
+}
+
+.liste tbody tr td {
+  font-family: 'Open Sans', sans-serif;
+  font-weight:400;
+  color:#5f6062;
+  font-size:13px;
+  padding:8px;
+  border-bottom:1px solid #e0e0e0;
+  
+}
+
+.liste tbody:hover > tr td {
+ opacity:0.5;
+}
+
+.liste tbody:hover > tr:hover td {
+  text-shadow:none;
+  color:#2d2d2d;
+  opacity:1.0;
+}
+.liste tr td:first-child{
+	 color:#0075ea;
+	 text-decoration: blink;
+}
+.liste tr td:first-child a{
+	 color:#0075ea;
+	 text-shadow: blue 2px 2px 30px;
+}
+
+/* on génère un élément :after lors du survol et du focus :*/
+
+.picto-item {
+  position: relative;  /*les .picto-item deviennent référents*/
+  cursor: help;
+  border-radius: 50%;
+}
+
+/* on génère un élément :after lors du survol et du focus :*/
+
+.picto-item:hover:after,
+.picto-item:focus:after {
+  content: attr(aria-label);  /* on affiche aria-label */
+  position: absolute;
+  top: -2.4em;
+  left: 50%;
+	transform: translateX(-50%); /* on centre horizontalement  */
+  z-index: 1; /* pour s'afficher au dessus des éléments en position relative */
+  white-space: nowrap;  /* on interdit le retour à la ligne*/
+  padding: 5px 14px;
+  background: #413219;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 4px;
+}
+/* on génère un second élément en :before pour la flèche */
+[aria-label]:hover:before,
+[aria-label]:focus:before {
+  content: "▼";
+  position: absolute;
+  top: -1em;
+	left: 50%;
+	transform: translateX(-50%); /* on centre horizontalement  */
+  color: #413219;
+}
+/* pas de contour durant le :focus */
+[aria-label]:focus {
+  outline: none;
+}
+/* déco */ 
+.picto-item {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;	
+  text-align: center;
+  text-decoration: underline;
+  color: #0080ff;
+}
